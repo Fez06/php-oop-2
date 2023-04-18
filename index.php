@@ -13,6 +13,7 @@ var_dump($ciboCane, $topino, $voliera);
 
 $prodotti = [$ciboCane, $topino, $voliera];
 
+
 ?>
 
 <!DOCTYPE html>

@@ -18,6 +18,8 @@ class Product
         $this->img = $_img;
         $this->categoria = $_categoria;
     }
+
+    
 }
 
 //$ciboCane = new Product('Royal Canin', 43.99);

@@ -14,5 +14,7 @@ class Gioco extends Product
         $this->caratteristiche = $_caratteristiche;
         $this->dimensioni = $_dimensioni;
     }
+
+    
 }
 
