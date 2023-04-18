@@ -9,7 +9,7 @@ $topino = new Gioco('Topini di peluche Trixie', 4.99, ['Gatto'], 'Morbido con co
 $voliera = new Accessorio('legno', 'M:L83 x P67 x H153', 'Voliera Wilma in Legno', 184.99, ['Uccello']);
 
 $ciboCane = new cibo(['prosciutto', 'riso'], 'Royal Canin', 43.99, ['cane'], null, '545g');
-//var_dump($ciboCane, $topino, $voliera);
+var_dump($ciboCane, $topino, $voliera);
 
 $prodotti = [$ciboCane, $topino, $voliera];
 
@@ -32,11 +32,10 @@ $prodotti = [$ciboCane, $topino, $voliera];
         <!-- nome prodotto -->
         <h3><?php echo $item->nome ?></h3>
         <!-- categoria -->
-        <div><?php foreach ($prodotti as $categoria) {
-            foreach ($categoria as $animale) {
-                echo $animale;
-            }
-        } ?></div>
+        <div>
+           <?php foreach ($item-> ingredienti as $ingrediente) echo $ingrediente?>
+        </div>
+        
         <!-- prezzo prodotto -->
         <h3><?php echo $item->prezzo ?></h3>
 
