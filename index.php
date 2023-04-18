@@ -13,7 +13,9 @@ var_dump($ciboCane, $topino, $voliera);
 
 $prodotti = [$ciboCane, $topino, $voliera];
 
+function getIngr() {
 
+};
 ?>
 
 <!DOCTYPE html>

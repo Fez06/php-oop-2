@@ -1,13 +1,15 @@
 <?php
 
-//require_once __DIR__ . '/Cibo.php';
+require_once __DIR__ . '/../Traits/TraitProduct.php';
 
 class Product
 {
-    public $nome;
-    public $prezzo;
-    public $img;
-    public $categoria;
+    // public $nome;
+    // public $prezzo;
+    // public $img;
+    // public $categoria;
+
+    use ProductTrait;
 
     function __construct($_nome, $_prezzo, array $_categoria, $_img='N/A')
     {
