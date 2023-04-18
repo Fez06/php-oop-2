@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/components/Product.php';
 require_once __DIR__ . '/components/Accessorio.php';
 require_once __DIR__ . '/components/Gioco.php';
 require_once __DIR__ . '/components/Cibo.php';
@@ -13,9 +13,6 @@ var_dump($ciboCane, $topino, $voliera);
 
 $prodotti = [$ciboCane, $topino, $voliera];
 
-function getIngr() {
-
-};
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +32,11 @@ function getIngr() {
         <h3><?php echo $item->nome ?></h3>
         <!-- categoria -->
         <div>
-           <?php foreach ($item-> ingredienti as $ingrediente) echo $ingrediente?>
+           <?php if (is_a($item, 'Cibo'))//if (property_exists($item, array $ingredienti)) {
+                foreach ($item->ingredienti as $ingrediente) 
+                //(in_array($item, $item->ingredienti) && $item->ingredienti == null)
+                echo ($ingrediente . '. ');?>
+               
         </div>
         
         <!-- prezzo prodotto -->
